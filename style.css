@@ -1,0 +1,196 @@
+:root {
+  --bg-color: #f7f9fc;
+  --card-bg: #ffffff;
+  --text-primary: #2d3748;
+  --text-secondary: #718096;
+  --accent-color: #3182ce;
+  --accent-hover: #2b6cb0;
+  --border-color: #e2e8f0;
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+header p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.card-section {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.card-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.task-list {
+  list-style: none;
+}
+
+.task-list li {
+  margin-bottom: 12px;
+}
+
+.task-list li:last-child {
+  margin-bottom: 0;
+}
+
+.task-link {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background: #fafbfc;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+.task-link:hover {
+  border-color: var(--accent-color);
+  background: #f0f4f8;
+  transform: translateY(-1px);
+}
+
+.task-number {
+  font-weight: bold;
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  margin-right: 16px;
+  min-width: 40px;
+}
+
+.task-info {
+  flex-grow: 1;
+}
+
+.task-info h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.task-info p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.arrow {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-left: 12px;
+  transition: transform 0.2s ease;
+}
+
+.task-link:hover .arrow {
+  transform: translateX(4px);
+  color: var(--accent-color);
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+/* カウンターアプリ用の追加スタイル */
+.counter-card {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.counter-display {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin: 30px 0;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+}
+
+.btn-secondary {
+  background-color: #e2e8f0;
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  background-color: #cbd5e0;
+}
